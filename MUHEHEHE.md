@@ -1,0 +1,1 @@
+saya encem dan padu
