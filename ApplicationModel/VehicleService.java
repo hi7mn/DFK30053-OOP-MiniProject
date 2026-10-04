@@ -1,4 +1,4 @@
-public class VehicleService {
+public abstract class VehicleService {
     // Encapsulation: Access modifier protected supaya boleh dicapai oleh subclass
     protected String serviceId;
     protected String customerName;
@@ -13,10 +13,10 @@ public class VehicleService {
         this.basePrice = basePrice;
     }
 
-    // Abstract method untuk dilaksanakan oleh subclass (Polymorphism)[cite: 4]
+    // Abstract method untuk dilaksanakan oleh subclass (Polymorphism)
     public abstract double calculateTotalCost();
 
-    // Getters and Setters[cite: 4]
+    // Getters and Setters
     public String getServiceId() {
         return serviceId;
     }
