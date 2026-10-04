@@ -1,5 +1,3 @@
-package Main.main;
-
 import application.model.CarService;
 import application.model.MotorcycleService;
 import application.service.ServiceManager;
