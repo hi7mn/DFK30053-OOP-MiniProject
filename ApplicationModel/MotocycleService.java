@@ -4,7 +4,7 @@ public class MotocycleService extends VehicleService{
     private boolean includeChainLube; // true jika tambah pelincir rantai
 
     // Constructor[cite: 4]
-    public MotorcycleService(String serviceId, String customerName, String plateNumber, double basePrice, String engineType, boolean includeChainLube) {
+    public MotocycleService(String serviceId, String customerName, String plateNumber, double basePrice, String engineType, boolean includeChainLube) {
         super(serviceId, customerName, plateNumber, basePrice); // Memanggil constructor VehicleService[cite: 4]
         this.engineType = engineType;
         this.includeChainLube = includeChainLube;

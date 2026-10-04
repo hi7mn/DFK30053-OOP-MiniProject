@@ -1,6 +1,6 @@
-import application.model.CarService;
-import application.model.MotorcycleService;
-import application.service.ServiceManager;
+import model.CarService;
+import model.MotorcycleService;
+import service.ServiceManager;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
