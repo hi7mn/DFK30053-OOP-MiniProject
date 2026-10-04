@@ -1,8 +1,8 @@
 package Main.main;
 
-import Main.model.CarService;
-import Main.model.MotorcycleService;
-import Main.service.ServiceManager;
+import application.model.CarService;
+import application.model.MotorcycleService;
+import application.service.ServiceManager;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
