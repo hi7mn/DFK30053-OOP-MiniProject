@@ -1,1 +1,1 @@
-saya encem dan padu
+selamat malam rohingya
