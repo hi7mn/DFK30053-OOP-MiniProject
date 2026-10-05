@@ -1,4 +1,5 @@
 public class ServiceManager {
-    Boleh dak dib
-    oiiiiiiiiiiiiiiiiiiiiiiiiiiii
+    public ServiceManager() {
+        System.out.println("ServiceManager class is initialized.");
+    }
 }
