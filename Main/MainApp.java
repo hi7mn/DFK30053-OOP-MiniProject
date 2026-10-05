@@ -49,10 +49,9 @@ public class MainApp {
                 }
 
             } catch (InputMismatchException e) {
-                // Exception handling untuk mengelakkan program crash jika user masuk huruf/simbol
                 System.out.println("\n[RALAT] Input tidak sah! Sila masukkan nombor sahaja.");
-                scanner.nextLine(); // Clear invalid input dari scanner
-                choice = 0; // Reset pilihan
+                scanner.nextLine(); // Clear invalid input from scanner
+                choice = 0;
             } catch (Exception e) {
                 System.out.println("\n[RALAT SIKAP] Berlaku ralat: " + e.getMessage());
                 scanner.nextLine();
@@ -66,26 +65,28 @@ public class MainApp {
     // --- Helper Method 1: Tambah Servis Kereta ---
     private static void tambahServisKereta(Scanner scanner, ServiceManager manager) {
         System.out.println("\n--- Tambah Servis Kereta ---");
-        
+
         System.out.print("Masukkan ID Servis (cth: SRV101): ");
-        String id = scanner.nextLine().trim().toUpperCase(); // String Manipulation
+        String id = scanner.nextLine().trim().toUpperCase();
 
         System.out.print("Masukkan Nama Pelanggan: ");
         String name = scanner.nextLine().trim();
 
         System.out.print("Masukkan Nombor Plat Kenderaan: ");
-        String plate = scanner.nextLine().trim().toUpperCase(); // String Manipulation
+        String plate = scanner.nextLine().trim().toUpperCase();
 
         System.out.print("Masukkan Harga Asas Servis (RM): ");
         double basePrice = scanner.nextDouble();
+        scanner.nextLine();
 
         System.out.print("Masukkan Kapasiti Enjin (cc): ");
         int cc = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.print("Servis Penuh? (true/false): ");
         boolean isFull = scanner.nextBoolean();
+        scanner.nextLine();
 
-        // Buat objek CarService dan tambah ke ServiceManager
         CarService car = new CarService(id, name, plate, basePrice, cc, isFull);
         manager.addService(car);
     }
@@ -95,25 +96,25 @@ public class MainApp {
         System.out.println("\n--- Tambah Servis Motosikal ---");
 
         System.out.print("Masukkan ID Servis (cth: SRV102): ");
-        String id = scanner.nextLine().trim().toUpperCase(); // String Manipulation
+        String id = scanner.nextLine().trim().toUpperCase();
 
         System.out.print("Masukkan Nama Pelanggan: ");
         String name = scanner.nextLine().trim();
 
         System.out.print("Masukkan Nombor Plat Kenderaan: ");
-        String plate = scanner.nextLine().trim().toUpperCase(); // String Manipulation
+        String plate = scanner.nextLine().trim().toUpperCase();
 
         System.out.print("Masukkan Harga Asas Servis (RM): ");
         double basePrice = scanner.nextDouble();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine();
 
         System.out.print("Masukkan Jenis Enjin (2-Stroke / 4-Stroke): ");
         String engineType = scanner.nextLine().trim();
 
         System.out.print("Hadiah Percuma Helmet? (true/false): ");
         boolean freeHelmet = scanner.nextBoolean();
+        scanner.nextLine();
 
-        // Buat objek MotorcycleService dan tambah ke ServiceManager
         MotorcycleService moto = new MotorcycleService(id, name, plate, basePrice, engineType, freeHelmet);
         manager.addService(moto);
     }
@@ -121,8 +122,8 @@ public class MainApp {
     // --- Helper Method 3: Carian Nombor Plat ---
     private static void cariServis(Scanner scanner, ServiceManager manager) {
         System.out.print("\nMasukkan Nombor Plat untuk dicari: ");
-        String searchPlate = scanner.nextLine().trim().toUpperCase(); // String Manipulation
-        
+        String searchPlate = scanner.nextLine().trim().toUpperCase();
+
         manager.searchByPlateNumber(searchPlate);
     }
 }
