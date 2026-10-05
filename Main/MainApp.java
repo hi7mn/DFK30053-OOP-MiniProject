@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import model.CarService;
 import model.MotorcycleService;
 import service.ServiceManager;
-=======
-package Main.main;
-
-import application.model.CarService;
-import application.model.MotorcycleService;
-import application.service.ServiceManager;
->>>>>>> 1e9f547e31a0b9fabb56390dfe109ca84779e568
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
