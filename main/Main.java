@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-/**
- * Program utama: Sistem Pengurusan Service Kenderaan.
- */
 public class Main {
 
     private static Scanner input = new Scanner(System.in);
